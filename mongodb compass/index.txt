@@ -1,0 +1,8 @@
+download mongodb compass 
+
+
+we run all command in mongodb shell now we are use mongodb compass
+
+ths is mondb gui 
+
+

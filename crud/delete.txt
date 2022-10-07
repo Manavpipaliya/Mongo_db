@@ -1,0 +1,14 @@
+
+
+// delete in mongodb
+
+syntx
+
+deleteMany() => db.collection_name.deleteMany(DELETION_CERITERIA)
+
+
+
+for delete all 
+
+
+deleteMany() => db.collectionname.deleteMany({})

@@ -1,0 +1,28 @@
+// update query
+
+ Syntax
+UpdateOne() = db.COLLECTION_NAME>uppdateOne(<FILTer>, <update>)
+
+UpdateMany() = db.COLLECTION_NAME>uppdate(<FILTer>, <update>)
+
+
+
+update name = dj to devang
+
+... 
+
+syntx for update  
+
+   ==>>>>>>>>>>>  db.collection_name.updateone({filter} , {$set: {value to be update }})
+
+
+
+
+
+> db.mnvdata.updateOne({name:"dj" }, {$set: {name:"devang"}})
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+> db.mnvdata.find().pretty()
+
+
+
+get request 

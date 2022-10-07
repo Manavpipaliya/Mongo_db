@@ -1,0 +1,68 @@
+db.collection.find( query, projection)
+
+// #5 
+
+the query & read in document 
+
+1)
+
+use mnvdb
+
+db.mnvdata.find()
+
+
+
+2) db.mnvdata.find().pretty()
+
+
+3)}
+> db.mnvdata.find(name:"rohan")
+uncaught exception: SyntaxError: missing ) after argument list :
+@(shell):1:20
+> db.mnvdata.find({name :"rohan"})
+{ "_id" : ObjectId("62a0389c22cf9a277a211939"), "name" : "rohan", "age" : 23, "city" : "surat", "active" : true }
+> db.mnvdata.find({name:"dj"}).pretty()
+{
+        "_id" : ObjectId("62a036d322cf9a277a211938"),
+        "name" : "dj",
+        "age" : 20,
+        "city" : "surat",
+        "active" : "true"
+
+
+
+4) only get one filed 
+> db.mnvdata.find({name:"dj"} , {name:1})
+{ "_id" : ObjectId("62a036d322cf9a277a211938"), "name" : "dj" }
+>
+
+5) without object _id
+> db.mnvdata.find({name:"dj"} , {_id:0,name:1})
+{ "name" : "dj" }
+>
+
+6)  set the filter true   n get only first field with active true  
+> db.mnvdata.find({active:true}).limit(1)
+{ "_id" : ObjectId("62a0389c22cf9a277a211939"), "name" : "rohan", "age" : 23, "city" : "surat", "active" : true }
+>
+
+7) second method for 6 th question
+
+> db.mnvdata.findOne({active:true})
+{
+        "_id" : ObjectId("62a0389c22cf9a277a211939"),
+        "name" : "rohan",
+        "age" : 23,
+        "city" : "surat",
+        "active" : true
+}
+>
+
+
+8)  skip  first result abdd get out put 
+> db.mnvdata.find({active:true}).limit(1).skip(1)
+{ "_id" : ObjectId("62a041275da62ca4b91c77f2"), "name" : "vrut", "city" : "surat", "age" : 20, "active" : true }
+>
+
+
+

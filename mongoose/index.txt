@@ -1,0 +1,7 @@
+
+
+
+//// moongoose is built connection between node js and mongodb database 
+
+
+// is odm object  documment mapper
